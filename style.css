@@ -6,11 +6,21 @@ background: url(img/background.svg)no-repeat center center fixed;
 background-size: cover;
 box-sizing: border-box;
 }
+
 /*index*/
-body h2, h3, p{
+body h1,h2, h3, p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
 }
+
+.index-html {
+    color: black;
+    font-size: 57px;
+    position: absolute;
+    top: 0%; 
+    left: 0%; 
+}
+
 
 .top-nav {
     position: fixed;
@@ -56,11 +66,11 @@ body h2, h3, p{
 
 .about-container{
     text-align: center;
-    padding: 50px 20px;
+    padding: 90px 20px;
     background-color:rgba(255, 255, 255, 0.8);
 }
 header {
-    max-width: 500px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -285,6 +295,12 @@ img{
     }
     .project-images img{
         margin-bottom: 10px;
+    }
+    .index-html {
+        color: black;
+        font-size: 57px;
+        position: absolute;
+        margin-top: 0%;
     }
     /*CV*/
     .image-container {
