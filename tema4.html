@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="https://telmak.dk/kea/04_animation/website/index.html" class="website-links"> Link til mit spil</a>
+    <!-- Navigation Menu -->
+ <nav class="top-nav">
+    <a href="index.html">Hjem</a>
+    <a href="cv.html">CV</a>
+</nav>
+
+<section class="tema3-content">
+    <h2>Tema 4 - Grundlæggende animation</h2>
+    <h3>Spil-ide og papirprotype</h3>
+    <div class="tema3-img">
+        <img src="4img/idee.png" alt="sketch1">
+        <img src="4img/ide2.png" alt="crazy8">
+        <img src="4img/ide3.png" alt="solution">
+    </div>
+    <p>
+        Mit spil hedder 'MakeupMia'. Hovedpersonen er en pige som hedder Mia, og hun er på vej til byen for at købe makeup til sig selv. Spilleren skal klikke på makeuppen, så pigen får den makeup, hun ønskede fra butikken, så hun kan fylde sin makeup-taske. Men hvis spilleren klikker på rotterne, afspilles en lyd, der signalerer, at det er game over, og hun går tomhændet hjem.Når spilleren har startet spillet, begynder elementerne at falde ned fra himlen. Der er forskellige slags makeup og rotter, som lever i byen, der kommer ned. For at vinde spillet skal spilleren samle 10 forskellige slags makeupprodukter på 30 sekunder. Hvis spilleren klikker på rotten, er det game over, og spilleren skal starte forfraObjekter
+
+    </p>
+</section> 
+
+<section class="tema3-content">
+    <h3>Aktivitetsdiagrammer</h3>
+    <div class="tema3-img">
+        <img src="4img/f.png" alt="sketch1">
+        <img src="4img/two.png" alt="crazy8">
+    </div>
+    <p>I begynderen af tema 4 lavede vi et aktivitetsdiagram for vores spil for at forstå dets flow. Du kan observere, at når spilleren starter spillet, indlæses funktionen 'sidenVises'. 30-sekunders-uret begynder, point og liv nulstilles, og der indstilles tilfældige positioner med tilfældige forsinkelser for både 'godt' og 'dårligt' element. Herefter begynder elementerne at falde ned.
+
+        I spilmekanikken akkumuleres point ved at klikke på det 'gode' element, 'makeup', mens at klikke på det 'dårlige' element bringer spilleren tættere på at tabe spillet. Hvis det 'gode' element ikke klikkes inden for 30 sekunder, taber spilleren spillet. Dog, hvis det 'gode' element klikkes 6 gange, vinder spilleren spillet.
+    </p>
+</section>
+
+<section class="tema3-content">
+    <h3>Javascript</h3>
+    <div class="tema3-img">
+        <img src="4img/java1.png" alt="Javascript">
+        <img src="4img/java2.png" alt="Javascript">
+        <img src="4img/java3.png" alt="Javascript">
+        <img src="4img/java4.png" alt="Javascript">
+        <img src="4img/java5.png" alt="Javascript">
+    </div>
+    <p>
+        I JavaScript-koden, er der implementeret et simpelt browserspil med to elementer: et "dårligt" element repræsenteret ved en rotte og et "godt" element repræsenteret ved makeup. Spilleren taber spillet, hvis de klikker på rotten, og de vinder, hvis de klikker på makeuppen. Her er en kort oversigt over, som jeg har implementeret:
+    </p>
+    <h3> 1.	Spilelementer:</h3>
+    <p>
+	ratContainer og ratSprite: Elementer, der repræsenterer det "dårlige" element (rotte).	
+    makeupContainer og makeupSprite: Elementer, der repræsenterer det "gode" element (makeup).
+	scoreBoard, lifeBoard og timeBoard: Elementer, der viser spilstatistikker.
+	startScreen, gameOverScreen og levelCompleteScreen: Skærme til at starte, afslutte og fuldføre spillet.
+	pointsCounter og lifeCounter: Tællere for point og liv.
+    </p>
+    <h3>2. Spilogik:</h3>
+    <p>
+    	Spillet starter, når vinduet indlæses (window.addEventListener("load", sidenVises);).
+	At klikke på makeup-elementet øger spillerens point, og at klikke på rotten mindsker spillerens liv.
+	Spillet har en tidsbegrænsning, og hvis spilleren løber tør for liv eller tid, slutter spillet.
+	Spillet inkluderer også nulstil-funktionalitet med knapper (resetGameButtons), der genindlæser siden for at genstarte spillet.
+    </p>
+    <h3>3.	Animationer:</h3>
+    <p>
+    	Elementerne har animationer som faldende (fall), forsvinder (forsvind) og pauser (pause).
+	Animationsevents som f.eks. animationend bruges til at udløse handlinger som nulstilling af elementer.
+    </p>
+    <h3>4.	Vind/tab-betingelser:</h3>
+    <p>	Hvis spilleren opnår de maksimale point (i dette tilfælde 6), vinder de og ser en ”successkærm”
+        Hvis spilleren løber tør for liv, før de når det krævede antal point, taber de og ser spillets afslutningsskærm.
+    </p>
+    <h3>5.	Tilfældighed:</h3>
+    <p>Der anvendes tilfældige positioner og forsinkelser på de faldende elementer for at tilføje variation til gameplayet</p>
+</section>
+</body>
+</html>
